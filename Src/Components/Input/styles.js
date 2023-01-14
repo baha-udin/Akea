@@ -1,12 +1,13 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet, Dimensions} from 'react-native';
 import {Colors} from '../../Utils/colors';
+import {ResWidth, ResHeight} from '../../Utils/responsive';
 
 const styles = StyleSheet.create({
   container: {
     marginBottom: 20,
   },
   label: {
-    fontSize: 15,
+    fontSize: Dimensions.get('window').width > 600 ? 24 : ResHeight(15),
     fontWeight: '400',
     color: Colors.blue,
     marginBottom: 8,
@@ -22,12 +23,12 @@ const styles = StyleSheet.create({
   },
   input: {
     paddingHorizontal: 12,
-    paddingVertical: 20,
+    paddingVertical: Platform.OS == 'android' ? 8 : ResWidth(12),
     width: '75%',
   },
   icon: {
-    width: 24,
-    height: 24,
+    width: Dimensions.get('window').width > 600 ? 30 : 18,
+    height: Dimensions.get('window').width > 600 ? 30 : 18,
   },
 });
 

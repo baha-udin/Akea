@@ -1,43 +1,22 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, Image, StyleSheet} from 'react-native';
+import styles from './styles';
 import {Colors} from '../../Utils/colors';
+import {ResWidth, ResHeight} from '../../Utils/responsive';
 
-const Button = ({title, Icon, isImage, isText, color}) => {
-  const handlePress = () => {
-    console.log('Button clicked');
-  };
+const Button = ({title, icon, text, style, handlePress}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.6}
-      style={styles.container(color)}
+      style={[styles.container, style]}
       onPress={handlePress}>
-      {isText ? <Text style={styles.title}>{title}</Text> : null}
-
-      {isImage ? <Image source={Icon} style={styles.icon} /> : null}
+      {icon ? (
+        <Image source={icon} />
+      ) : (
+        <Text style={styles.title}>{title}</Text>
+      )}
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  container: color => ({
-    backgroundColor: color,
-    paddingVertical: 12,
-    paddingHorizontal: 8,
-    borderRadius: 8,
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  }),
-  title: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: Colors.white,
-  },
-  icon: {
-    width: 24,
-    height: 24,
-  },
-});
 
 export default Button;

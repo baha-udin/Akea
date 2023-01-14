@@ -1,5 +1,5 @@
 package com.akea;
-import android.os.Bundle;npm install @react-navigation/native-stack
+import android.os.Bundle;cd
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;

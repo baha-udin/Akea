@@ -9,6 +9,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     height: '100%',
+    width: '100%',
+    backgroundColor: 'white',
   },
   image: {
     width: '100%',
@@ -31,10 +33,9 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     textAlign: 'center',
   },
-  signIn: {
-    marginTop: 24,
+  footerText: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '500',
     textAlign: 'center',
     color: Colors.black,
   },
