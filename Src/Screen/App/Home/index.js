@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import styles from './styles';
+import {FlashList} from '@shopify/flash-list';
 import Header from '../../../Components/Header';
 import Gap from './../../../Components/Gap';
 import Category from '../../../Components/Category';

@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
-import ItemCategory from '../ItemCategory';
+import CategoryBox from './../CategoryBox';
 import {
   IconStar,
   IconBed,
@@ -21,12 +21,12 @@ const Category = () => {
         horizontal
         showsHorizontalScrollIndicator={false}
         style={styles.wrapCategory}>
-        <ItemCategory image={IconStar} title={'Favourite'} />
-        <ItemCategory image={IconBed} title={'Bed'} />
-        <ItemCategory image={IconChair} title={'Chair'} />
-        <ItemCategory image={IconSofa} title={'Sofa'} />
-        <ItemCategory image={IconTable} title={'Table'} />
-        <ItemCategory image={IconLamp} title={'Lamp'} />
+        <CategoryBox image={IconStar} title={'Favourite'} />
+        <CategoryBox image={IconBed} title={'Bed'} />
+        <CategoryBox image={IconChair} title={'Chair'} />
+        <CategoryBox image={IconSofa} title={'Sofa'} />
+        <CategoryBox image={IconTable} title={'Table'} />
+        <CategoryBox image={IconLamp} title={'Lamp'} />
       </ScrollView>
     </View>
   );
