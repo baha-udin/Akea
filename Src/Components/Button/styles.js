@@ -1,10 +1,11 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions, Platform} from 'react-native';
 import {Colors} from '../../Utils/colors';
+import {ResWidth, ResHeight} from '../../Utils/responsive';
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.blue,
-    paddingVertical: 12,
+    paddingVertical: Dimensions.get('window').width > 600 ? 24 : 8,
     paddingHorizontal: 8,
     borderRadius: 8,
     width: '100%',

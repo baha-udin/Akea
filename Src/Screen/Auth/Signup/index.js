@@ -9,8 +9,9 @@ import Gap from '../../../Components/Gap';
 import {IconGoogle} from '../../../Assets/icons';
 import Link from '../../../Components/Link';
 import {Colors} from '../../../Utils/colors';
+import Separator from '../../../Components/Separator';
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   const [checked, setChecked] = useState(false);
   return (
     <View style={styles.container}>
@@ -28,12 +29,17 @@ const Signup = () => {
         <Gap height={20} />
         <Button isText={true} title={'Sign Up'} color={Colors.blue} />
         <Gap height={36} />
-        <Text style={styles.option}>Or sign up with</Text>
+
+        <Separator text="Or sign up with" />
         <Gap height={36} />
-        <Button isImage={true} Icon={IconGoogle} color={Colors.grey} />
+        <Button icon={IconGoogle} style={styles.IconGoogle} />
       </View>
       <View style={{height: 40}}>
-        <Link label={'Already have an account?'} CTA="Sign In" />
+        <Link
+          label={'Already have an account?'}
+          CTA="Sign In"
+          onPress={() => navigation.navigate('Signin')}
+        />
       </View>
     </View>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Colors} from '../../Utils/colors';
+import {ResWidth, ResHeight} from '../../Utils/responsive';
 
 export const styles = StyleSheet.create({
   mainContainer: {
@@ -12,11 +13,11 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    width: 24,
-    height: 24,
+    width: ResWidth(24),
+    height: ResHeight(24),
   },
   title: {
-    fontSize: 16,
+    fontSize: ResHeight(16),
     fontWeight: 'bold',
     letterSpacing: 0.3,
     color: Colors.black,
