@@ -19,9 +19,17 @@ const Tab = createBottomTabNavigator();
 
 const Tabs = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Home" component={Home} />
-    <Tab.Screen name="Favourites" component={Favourites} />
-    <Tab.Screen name="Profile" component={Profile} />
+    <Tab.Screen name="Home" component={Home} options={{headerShown: false}} />
+    <Tab.Screen
+      name="Favourites"
+      component={Favourites}
+      options={{headerShown: false}}
+    />
+    <Tab.Screen
+      name="Profile"
+      component={Profile}
+      options={{headerShown: false}}
+    />
   </Tab.Navigator>
 );
 const Router = () => {
@@ -42,7 +50,11 @@ const Router = () => {
         component={Signup}
         options={{headerShown: false}}
       />
-      <Stack.Screen name="Tabs" component={Tabs} />
+      <Stack.Screen
+        name="Tabs"
+        component={Tabs}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 };

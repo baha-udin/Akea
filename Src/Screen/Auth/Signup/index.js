@@ -29,7 +29,6 @@ const Signup = ({navigation}) => {
         <Gap height={20} />
         <Button isText={true} title={'Sign Up'} color={Colors.blue} />
         <Gap height={36} />
-
         <Separator text="Or sign up with" />
         <Gap height={36} />
         <Button icon={IconGoogle} style={styles.IconGoogle} />

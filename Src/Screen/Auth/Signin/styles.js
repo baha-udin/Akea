@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: Colors.blue,
   },
+  IconGoogle: {
+    backgroundColor: Colors.grayLight,
+  },
 });
 
 export default styles;

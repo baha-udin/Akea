@@ -9,8 +9,9 @@ import Gap from '../../../Components/Gap';
 import {IconGoogle} from '../../../Assets/icons';
 import Link from '../../../Components/Link';
 import {Colors} from '../../../Utils/colors';
+import Separator from '../../../Components/Separator';
 
-const Signin = () => {
+const Signin = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={{flex: 1}}>
@@ -20,17 +21,16 @@ const Signin = () => {
         <Gap height={36} />
         <Button isText={true} title={'Sign In'} color={Colors.blue} />
         <Gap height={36} />
-        <Text style={styles.option}>Or sign in with</Text>
+        <Separator text={'Or sign in with'} />
         <Gap height={36} />
-        <Button
-          isImage={true}
-          Icon={IconGoogle}
-          color={Colors.grey}
-          width="50%"
-        />
+        <Button icon={IconGoogle} style={styles.IconGoogle} />
       </View>
       <View style={{height: 40}}>
-        <Link label={'Don’t have an account?'} CTA="Sign Up" />
+        <Link
+          label={'Don’t have an account?'}
+          CTA="Sign Up"
+          onPress={() => navigation.navigate('Signup')}
+        />
       </View>
     </View>
   );
